@@ -1,5 +1,4 @@
 version: 2
-machine:
 jobs:
   build:
     working_directory: ~/etg_e2e
