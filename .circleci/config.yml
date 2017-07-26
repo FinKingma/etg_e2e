@@ -3,12 +3,9 @@ jobs:
   build:
     working_directory: ~/etg_e2e
     docker:
-      - image: node:4.6.0
+      - image: bahmutov/cypress-image:node-6-cypress-0.19.2
     steps:
       - checkout
-      - run: 
-          name: install cypress
-          command: npm install -g cypress-cli
       - run:
           name: run cypress e2e tests
           command: cypress run
