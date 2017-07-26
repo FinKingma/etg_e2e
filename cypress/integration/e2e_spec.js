@@ -12,11 +12,11 @@ describe('ET game', function(){
 
     it('correctly integrates all services', function(){
         cy
-            .get('#highscores').should('contain', '1')
+            .get('#highscores', { timeout: 500 }).should('contain', '1')
             .clock()
             .get('#play').click()
-            .get('#getReady').should('exist')
+            .get('#getReady', { timeout: 500 }).should('exist')
             .tick(5000)
-            .get('#title').should('contain','The Exploratory Testing Game')
+            .get('#title', { timeout: 500 }).should('contain','The Exploratory Testing Game')
     });
 });
