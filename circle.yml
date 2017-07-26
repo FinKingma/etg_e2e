@@ -1,0 +1,12 @@
+machine:
+  node:
+    version: 4.6.0
+  services:
+    - docker
+
+dependencies:
+  post:
+    - npm install -g cypress-cli
+
+test:
+    - cypress run
