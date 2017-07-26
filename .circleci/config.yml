@@ -8,9 +8,13 @@ jobs:
     steps:
       - checkout
       - run: 
-        name: install cypress
-        command: npm install -g cypress-cli
-    steps:
+          name: install cypress
+          command: npm install -g cypress-cli
       - run:
-        name: run cypress e2e tests
-        command: cypress run
+          name: run cypress e2e tests
+          command: cypress run
+      - store_artifacts:
+          path: test-reports/
+          destination: tr1
+       - store_test_results:
+          path: test-reports/
