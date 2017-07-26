@@ -10,4 +10,4 @@ jobs:
           name: run cypress e2e tests
           command: cypress run
       - store_test_results:
-          path: /test-results
+          path: test-results/

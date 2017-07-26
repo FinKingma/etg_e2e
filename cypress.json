@@ -3,5 +3,6 @@
     "reporterOptions": {
         "mochaFile": "test-results/cypress-test-output.xml",
         "toConsole": true
-    }
+    },
+    "execTimeout": 100
 }
